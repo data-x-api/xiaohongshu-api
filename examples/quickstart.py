@@ -21,7 +21,7 @@ SOURCE = "gh-xiaohongshu-api"
 SIGN_UP = f"https://dataxapi.com/zh/signin/?button={SOURCE}"
 ENDPOINT = "xiaohongshu.notes.search"
 PARAM = "query"
-PRICE = Decimal("0.02")  # 现价见 https://dataxapi.com/zh/apis/xiaohongshu/notes/search/
+PRICE = Decimal("0.02")  # 现价见 https://dataxapi.com/zh/apis/xiaohongshu/notes/search/?ref=gh-xiaohongshu-api
 
 
 def flatten(item: dict, prefix: str = "") -> dict:
