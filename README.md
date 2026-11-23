@@ -80,7 +80,7 @@ DataXAPI 的客户近 30 天里调用最多的几个，从多到少：
 | 接口 | 拿到什么 | 价格 | 编号 |
 |---|---|---|---|
 | [小红书视频笔记详情（视频地址和字幕）](https://dataxapi.com/zh/apis/xiaohongshu/videos/get/?ref=gh-xiaohongshu-api) | 按笔记编号或链接取一篇小红书视频笔记：标题、正文、作者、互动数，加上视频文件地址、时长、封面、平台生成的中文字幕（SRT，可当文字稿），以及是不是报备过的品牌合作笔记。只用于视频笔记；图文笔记用笔记详情。 | $0.02 一次 | `xiaohongshu.videos.get` |
-| [小红书视频转文字（文案提取、逐字稿）](https://dataxapi.com/zh/apis/xiaohongshu/videos/transcript/get/?ref=gh-xiaohongshu-api) | 给一篇小红书视频笔记的链接、分享文案或编号，返回视频里说的话：全文、每一句的起止时间和现成的 SRT 字幕，连同标题、作者和时长；平台给视频生成了字幕的直接用字幕，没有的识别语音，可以区分说话人。每次收费，识别语音的另按视频分钟数收，用平台字幕的不另收，没人说话不收。只接 5 分钟以内的视频。超过 5 分钟、2 小时以内的视频先回一个凭证（job），过一会儿带着它再调这个接口取文字，价格一样，只在取到文字时收。 | $0.02 一次 | `xiaohongshu.videos.transcript.get` |
+| [小红书视频转文字（文案提取、逐字稿）](https://dataxapi.com/zh/apis/xiaohongshu/videos/transcript/get/?ref=gh-xiaohongshu-api) | 给一篇小红书视频笔记的链接、分享文案或编号，返回视频里说的话：全文、每一句的起止时间和现成的 SRT 字幕，连同标题、作者和时长；平台给视频生成了字幕的直接用字幕，没有的识别语音，可以区分说话人。每次收费，识别语音的另按视频分钟数收，用平台字幕的不另收，没人说话不收。5 分钟以内的视频直接返回文字；超过 5 分钟、2 小时以内的先回一个凭证（job），过一会儿带着它再调这个接口取文字，按实际分钟数收，只在取到文字时收。 | $0.02 一次 | `xiaohongshu.videos.transcript.get` |
 | [小红书无水印视频下载地址（各档清晰度和字幕）](https://dataxapi.com/zh/apis/xiaohongshu/videos/media/get/?ref=gh-xiaohongshu-api) | 给一篇小红书视频笔记的编号、链接或分享文字，返回无水印视频的全部文件地址：每种编码（H.264、H.265 等）的每档清晰度，带宽高、码率和大小，另有备用地址，以及封面和平台生成的字幕文件（SRT，按语言给）；地址不用带请求头，取不到了再调一次即可。只用于视频笔记，图文笔记用 xiaohongshu.notes.media.get。 | $0.02 一次 | `xiaohongshu.videos.media.get` |
 
 ### 图片
@@ -222,4 +222,4 @@ No platform account, cookie or QR login. Paid per call from $0.02; errors are no
 
 MIT
 
-<sub>接口和价格取自 DataXAPI 的目录 dc959672dd18e2d0、价格版本 21；以 [dataxapi.com/zh/apis](https://dataxapi.com/zh/apis/?ref=gh-xiaohongshu-api) 为准。</sub>
+<sub>接口和价格取自 DataXAPI 的目录 e43c3e964bcc3fc3、价格版本 21；以 [dataxapi.com/zh/apis](https://dataxapi.com/zh/apis/?ref=gh-xiaohongshu-api) 为准。</sub>
